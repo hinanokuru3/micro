@@ -45,6 +45,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @microposts = @user.favoriteposts.page(params[:page])
     counts(@user)
+    render :show
   end
   private
 
