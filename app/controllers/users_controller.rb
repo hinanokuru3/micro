@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @favoriteposts = @user.favoriteposts.page(params[:page])
     counts(@user)
-    #render :show
+    render :show
   end
   private
 
